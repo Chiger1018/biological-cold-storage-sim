@@ -1,0 +1,53 @@
+#include <stdio.h>
+#include <string.h>
+
+int main()
+{
+    printf("把大象放进冰箱一共分几步？\n");
+    printf("------------------------\n");
+    int step;
+    printf("请输入你认为的答案：");
+    scanf("%d", &step);
+
+    if(step == 3)
+    {
+        printf("✅答对啦！\n");
+        printf("第一步：打开冰箱门\n");
+        printf("第二步：把大象塞进去\n");
+        printf("第三步：关上冰箱门\n");
+    }
+    else
+    {
+        printf("❌答错咯，标准答案是3步！\n");
+    }
+
+    printf("\n再来一题：把长颈鹿放进冰箱要几步？\n");
+    printf("请输入答案：");
+    scanf("%d", &step);
+    if(step == 4)
+    {
+        printf("✅正确！\n");
+        printf("第一步：打开冰箱门\n");
+        printf("第二步：把大象拿出来\n");
+        printf("第三步：把长颈鹿放进去\n");
+        printf("第四步：关上冰箱门\n");
+    }
+    else
+    {
+        printf("❌哈哈，是4步！别忘了先取出大象！\n");
+    }
+
+    printf("\n终极提问：森林开大会，谁没来？\n");
+    char ans[20];
+    scanf("%s", ans);
+    // 用strcmp对比完整字符串
+    if(strcmp(ans, "长颈鹿") == 0)
+    {
+        printf("🎉没错！长颈鹿，它还关在冰箱里呢\n");
+    }
+    else
+    {
+        printf("答案：长颈鹿，还被锁冰箱，没法参会\n");
+    }
+    return 0;
+}
